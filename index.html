@@ -7,68 +7,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* ===== PROFESSIONAL DESIGN SYSTEM ===== */
+        /* ===== DESIGN SYSTEM – White / Dark Blue / Transparent ===== */
         :root {
-            --bg: #f5f7fb;
-            --bg-card: #ffffff;
-            --bg-card-hover: #fafcff;
-            --border: #e8ecf2;
-            --border-hover: #d0d6e0;
-            --text-primary: #0a0e1a;
-            --text-secondary: #3d4459;
-            --text-tertiary: #6b748c;
-            --text-quaternary: #9aa3b8;
-            --accent: #4f6ef7;
-            --accent-hover: #3a56d4;
-            --accent-light: #eef1fe;
-            --gold: #e8a838;
-            --gold-light: #fdf3d0;
-            --green: #22b573;
-            --red: #e8545a;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.03), 0 8px 28px rgba(0, 0, 0, 0.02);
-            --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.04), 0 16px 56px rgba(0, 0, 0, 0.03);
-            --shadow-xl: 0 8px 40px rgba(0, 0, 0, 0.06), 0 24px 80px rgba(0, 0, 0, 0.04);
+            --bg: rgba(245, 247, 251, 0.75);
+            --bg-card: rgba(255, 255, 255, 0.82);
+            --bg-card-hover: rgba(255, 255, 255, 0.92);
+            --border: rgba(255, 255, 255, 0.25);
+            --border-hover: rgba(255, 255, 255, 0.5);
+            --text-primary: #0a1a2f;      /* dark blue */
+            --text-secondary: #1e3a5f;
+            --text-tertiary: #2c4c7a;
+            --text-quaternary: #4a6a96;
+            --accent: #1e3a5f;            /* dark blue */
+            --accent-hover: #0f2442;
+            --accent-light: rgba(30, 58, 95, 0.15);
+            --gold: #c9a040;
+            --gold-light: rgba(201, 160, 64, 0.15);
+            --green: #2a9d8f;
+            --red: #e76f51;
+            --shadow-sm: 0 1px 6px rgba(0, 0, 0, 0.08);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.15);
             --radius-sm: 8px;
             --radius: 14px;
             --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         [data-theme="dark"] {
-            --bg: #0c0f18;
-            --bg-card: #151c2b;
-            --bg-card-hover: #1a2233;
-            --border: #232c3e;
-            --border-hover: #2f3a52;
-            --text-primary: #edf2f7;
-            --text-secondary: #a8b5cc;
-            --text-tertiary: #6f7e9a;
-            --text-quaternary: #475570;
-            --accent: #6a87f8;
-            --accent-hover: #5a77e6;
-            --accent-light: #1a223f;
-            --gold: #e8a838;
-            --gold-light: #2a1f0a;
-            --green: #28c87a;
-            --red: #f06066;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.5);
-            --shadow-xl: 0 8px 40px rgba(0, 0, 0, 0.6);
+            --bg: rgba(10, 20, 40, 0.75);      /* semi-transparent dark */
+            --bg-card: rgba(15, 30, 55, 0.82);
+            --bg-card-hover: rgba(25, 45, 75, 0.92);
+            --border: rgba(255, 255, 255, 0.15);
+            --border-hover: rgba(255, 255, 255, 0.35);
+            --text-primary: #e8f0fe;           /* white-blue */
+            --text-secondary: #b0c8e8;
+            --text-tertiary: #7a9bc7;
+            --text-quaternary: #4a6a8a;
+            --accent: #8ab4f8;                 /* light blue accent */
+            --accent-hover: #6a9cf0;
+            --accent-light: rgba(138, 180, 248, 0.15);
+            --gold: #f4c542;
+            --gold-light: rgba(244, 197, 66, 0.15);
+            --green: #4cdfc0;
+            --red: #f28b82;
+            --shadow-sm: 0 1px 8px rgba(0, 0, 0, 0.35);
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.40);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.50);
+            --shadow-xl: 0 12px 56px rgba(0, 0, 0, 0.60);
         }
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+
+        /* ===== FARM GRASS BACKGROUND ===== */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
+            background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
             color: var(--text-primary);
             padding: 0;
             min-height: 100vh;
-            transition: background 0.4s, color 0.4s;
             -webkit-font-smoothing: antialiased;
         }
+
+        /* Glass-morphism overlay on main container */
+        .app {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 28px 60px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            min-height: 100vh;
+        }
+
         ::-webkit-scrollbar {
             width: 5px;
             height: 5px;
@@ -80,13 +91,8 @@
             background: var(--accent);
             border-radius: 4px;
         }
-        .app {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 24px 28px 60px;
-        }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER – glass effect ===== */
         .header {
             display: flex;
             align-items: center;
@@ -95,6 +101,8 @@
             gap: 16px;
             padding: 16px 24px;
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border-radius: var(--radius);
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
@@ -152,6 +160,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            backdrop-filter: blur(4px);
         }
         .theme-toggle:hover {
             border-color: var(--accent);
@@ -168,6 +177,7 @@
             background: var(--accent-light);
             color: var(--accent);
             border: 1px solid var(--border);
+            backdrop-filter: blur(4px);
         }
         .status-badge .dot {
             width: 5px;
@@ -195,6 +205,8 @@
         }
         .stat-card {
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 18px 20px;
@@ -232,6 +244,8 @@
             display: flex;
             gap: 4px;
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             padding: 4px;
             border-radius: var(--radius);
             border: 1px solid var(--border);
@@ -257,7 +271,7 @@
         }
         .tab:hover {
             color: var(--text-primary);
-            background: var(--bg);
+            background: rgba(255,255,255,0.1);
         }
         .tab.active {
             background: var(--accent);
@@ -279,6 +293,8 @@
         /* ===== RANKING TABLE ===== */
         .table-wrap {
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border-radius: var(--radius);
             border: 1px solid var(--border);
             overflow: hidden;
@@ -302,6 +318,8 @@
             text-align: left;
             padding: 14px 18px;
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             color: var(--text-tertiary);
             font-weight: 700;
             font-size: 10px;
@@ -404,6 +422,8 @@
         .root-details {
             display: none;
             background: var(--bg);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
         }
         .root-details.open {
             display: table-row;
@@ -420,6 +440,8 @@
         }
         .root-card {
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
             padding: 18px 20px;
@@ -601,6 +623,8 @@
             gap: 20px;
             padding: 24px 28px;
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
@@ -643,6 +667,8 @@
         }
         .analytics-grid .box {
             background: var(--bg-card);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
             padding: 18px 16px;
@@ -678,6 +704,8 @@
             left: 50%;
             transform: translateX(-50%) translateY(80px);
             background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             color: var(--text-primary);
             padding: 12px 28px;
             border-radius: 40px;
@@ -745,7 +773,6 @@
                 </div>
             </div>
             <div class="header-actions">
-                <!-- Default text is "Light" because we start in dark mode -->
                 <button class="theme-toggle" id="themeToggle"><i class="fas fa-sun"></i> <span>Light</span></button>
                 <div class="status-badge"><span class="dot"></span> Live</div>
                 <span class="region-badge">🇪🇹 Ethiopia</span>
@@ -809,7 +836,7 @@
                 <h3 style="font-size:18px;font-weight:700;color:var(--text-primary);"><i class="fas fa-chart-line" style="color:var(--accent);"></i> Performance Dashboard</h3>
                 <p style="color:var(--text-tertiary);font-size:13px;">Real-time metrics across all ranked companies.</p>
             </div>
-            <div style="background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);padding:24px;box-shadow:var(--shadow);">
+            <div style="background:var(--bg-card);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:var(--radius);border:1px solid var(--border);padding:24px;box-shadow:var(--shadow);">
                 <div class="analytics-grid">
                     <div class="box"><div class="label">Total Companies</div><div class="value accent">30</div></div>
                     <div class="box"><div class="label">Combined Budget</div><div class="value" id="analyticsBudget">0 ETB</div></div>
@@ -856,13 +883,13 @@
 
     <script>
         // ================================================================
-        // 30 COMPANIES – ESX VERIFIED (Top 6) + Realistic Estimates
+        // 30 COMPANIES – ESX VERIFIED (Hidden tag) + Realistic Estimates
         // ================================================================
         const realCompanies = [{
             id: 1,
-            name: "AWASH BANK S.C. ⭐ (ESX)",
+            name: "AWASH BANK S.C.",
             logo: "🏦",
-            service: "Banking & Finance (Listed)",
+            service: "Banking & Finance",
             location: "Addis Ababa",
             budget: 37896928000,
             views: 1280,
@@ -877,9 +904,9 @@
             listedDate: "April 23, 2026"
         }, {
             id: 2,
-            name: "BANK OF ABYSSINIA ⭐ (ESX)",
+            name: "BANK OF ABYSSINIA",
             logo: "🏛️",
-            service: "Banking & Finance (Listed)",
+            service: "Banking & Finance",
             location: "Addis Ababa",
             budget: 17500000000,
             views: 1120,
@@ -894,9 +921,9 @@
             listedDate: "July 28, 2026"
         }, {
             id: 3,
-            name: "ABAY BANK ⭐ (ESX)",
+            name: "ABAY BANK",
             logo: "🏛️",
-            service: "Banking & Finance (Listed)",
+            service: "Banking & Finance",
             location: "Addis Ababa",
             budget: 9657286000,
             views: 1870,
@@ -911,9 +938,9 @@
             listedDate: "June 25, 2026"
         }, {
             id: 4,
-            name: "WEGAGEN BANK ⭐ (ESX)",
+            name: "WEGAGEN BANK",
             logo: "🏦",
-            service: "Banking & Finance (Listed)",
+            service: "Banking & Finance",
             location: "Addis Ababa",
             budget: 6218635000,
             views: 1340,
@@ -928,9 +955,9 @@
             listedDate: "January 10, 2025"
         }, {
             id: 5,
-            name: "GADAA BANK ⭐ (ESX)",
+            name: "GADAA BANK",
             logo: "🏦",
-            service: "Banking & Finance (Listed)",
+            service: "Banking & Finance",
             location: "Addis Ababa",
             budget: 4000000000,
             views: 980,
@@ -945,9 +972,9 @@
             listedDate: "June 13, 2025"
         }, {
             id: 6,
-            name: "ETHIO TELECOM ⭐ (ESX)",
+            name: "ETHIO TELECOM",
             logo: "📡",
-            service: "Telecommunications (Listed)",
+            service: "Telecommunications",
             location: "Addis Ababa",
             budget: 3207044700,
             views: 2840,
@@ -1332,7 +1359,6 @@
         companies.sort((a, b) => b.budget - a.budget);
         companies.forEach((c, i) => c.rank = i + 1);
 
-        // Compute total budget for market share
         const totalBudgetAll = companies.reduce((s, c) => s + c.budget, 0);
 
         // ================================================================
@@ -1342,9 +1368,6 @@
         const toast = $('toast');
         const tbody = $('rankBody');
 
-        // ================================================================
-        // TOAST
-        // ================================================================
         function showToast(msg) {
             toast.textContent = msg;
             toast.className = 'toast show';
@@ -1364,7 +1387,6 @@
                 const websiteDisplay = c.website && c.website !== '—' ?
                     `<a href="${c.website}" target="_blank" style="color:var(--accent);">${c.website}</a>` :
                     '—';
-                // Calculated fields
                 const marketingBudget = Math.round(c.budget * (0.18 + Math.random() * 0.07));
                 const marketShare = ((c.budget / totalBudgetAll) * 100).toFixed(1);
                 const employeesFormatted = c.employees ? c.employees.toLocaleString() : '—';
@@ -1387,7 +1409,6 @@
                     <tr class="root-details" data-parent="${c.id}">
                         <td colspan="9">
                             <div class="root-inner">
-                                <!-- Card 1: Brand Profile -->
                                 <div class="root-card brand">
                                     <div class="card-head"><i class="fas fa-building"></i><span class="label">Brand Profile</span></div>
                                     <div class="brand-row">
@@ -1402,7 +1423,6 @@
                                         <span><strong>${employeesFormatted}</strong> employees</span>
                                     </div>
                                 </div>
-                                <!-- Card 2: Market Presence -->
                                 <div class="root-card market">
                                     <div class="card-head"><i class="fas fa-globe-africa"></i><span class="label">Market Presence</span></div>
                                     <div class="row"><i class="fas fa-location-dot"></i> <strong>${c.headquarters || 'Addis Ababa'}</strong></div>
@@ -1418,7 +1438,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Card 3: Company Info -->
                                 <div class="root-card contact">
                                     <div class="card-head"><i class="fas fa-address-card"></i><span class="label">Company Info</span></div>
                                     <div class="row"><i class="fas fa-user-tie"></i> <strong>${c.owner || '—'}</strong></div>
@@ -1444,7 +1463,6 @@
                     const expanded = this.dataset.expanded === 'true';
                     const details = document.querySelector(`.root-details[data-parent="${id}"]`);
 
-                    // Close others
                     document.querySelectorAll('.clickable-row').forEach(r => {
                         if (r.dataset.id !== id && r.dataset.expanded === 'true') {
                             const d = document.querySelector(`.root-details[data-parent="${r.dataset.id}"]`);
@@ -1467,7 +1485,6 @@
                 });
             });
 
-            // Update analytics
             const totalBudget = companies.reduce((s, c) => s + c.budget, 0);
             const totalViews = companies.reduce((s, c) => s + c.views, 0);
             const maxBudget = Math.max(...companies.map(c => c.budget));
@@ -1568,8 +1585,7 @@
         setInterval(updateFinalists, 5000);
         setInterval(updateViews, 7000);
 
-        console.log('✅ RankIQ – Dark mode default, ESX data ranks #1–#6.');
+        console.log('✅ RankIQ – Refreshed with white/dark-blue scheme, transparent glass effects, farm background visible.');
     </script>
-
 </body>
 </html>
